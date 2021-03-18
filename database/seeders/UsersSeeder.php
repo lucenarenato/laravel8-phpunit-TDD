@@ -17,16 +17,18 @@ class UsersSeeder extends Seeder
         $count = User::all()->count();
 
         if ($count == 0) {
-            echo 'nenhum usuario';
+            echo 'create user';
+            
+            $user = User::create([
+                'name' => 'Renato',
+                'email' => 'cpdrenato@gmail.com',
+                'password' => bcrypt('teste123'), //'password' => bcrypt(Str::random(15)),
+            ]);
         } else {
             echo "Qtde: " . $count . " Records Inside Database!";
         }
 
-        $user = User::create([
-            'name' => 'Renato',
-            'email' => 'r.lucena@xsensors.ai',
-            'password' => bcrypt('teste123'), //'password' => bcrypt(Str::random(15)),
-        ]);
+        
     }
 
 }

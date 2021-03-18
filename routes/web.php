@@ -7,6 +7,11 @@ use Illuminate\Support\Facades\Auth;
 
 //controller
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\BooksController;
+use App\Http\Controllers\AuthorsController;
+use App\Http\Controllers\CheckoutBookController;
+use App\Http\Controllers\CheckinBookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +24,20 @@ use App\Http\Controllers\CustomerController;
 |
  */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::post('/books', [BooksController::class],'store');
+Route::patch('/books/{book}', [BooksController::class],'update');
+Route::delete('/books/{book}', [BooksController::class],'destroy');
+
+Route::get('/authors/create', [AuthorsController::class],'create');
+Route::post('/authors', [AuthorsController::class],'store');
+
+Route::post('/checkout/{book}', [CheckoutBookController::class],'store');
+Route::post('/checkin/{book}', [CheckinBookController::class], 'store');
+
+
+/*Auth::routes();
+
+Route::get('/home', [HomeController::class],'index')->name('home');*/
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [

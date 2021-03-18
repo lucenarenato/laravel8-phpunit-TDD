@@ -10,8 +10,6 @@
 
 `vendor/bin/phpunit`
 
-
-
 ## Pasta tests do laravel
 
 ## Feature
@@ -22,6 +20,9 @@ Fazer testes unitarios
 
 ## browser
 para fazer testes funcionalidade, simulando uma pessoa navegando no seu projeto
+
+## Teoria - diferença de unit e feature?
+> Resumindo: testes unitários focam no ponto de vista do desenvolvedor, em classes e tem uma visão mais direta. Testes de feature costumam ver as coisas do ponto de vista do usuário, testando o que o usuário fará, tendo uma visão mais ampla.
 
 > Ideal limitando o tamanho do metodo em 100 caracteres, separado por _
 
@@ -49,11 +50,15 @@ php artisan make:controller CustomerController --resource
 
 vendor/bin/phpunit --filter only_logged_in_users_can_see_customers_list
 
-## unity
+## unit
 
 php artisan make:test UserTest --unit
 
 vendor/bin/phpunit --filter check_if_user_column_is_correct
+
+## Testes de login
+
+`vendor/bin/phpunit --filter test_login`
 
 # laravel dusk - serve para fazer tests de browser
 composer require --dev laravel/dusk
@@ -64,12 +69,6 @@ php artisan dusk --filter check_if_register_function_is_working
 
 ## Modo de uso | Running Tests
 `php artisan test --filter check_if_user_column_is_correct`
-
-
-- https://auth0.com/blog/testing-laravel-apis-with-phpunit/
-`vendor/bin/phpunit --coverage-text`
-`vendor/bin/phpunit --coverage-html tests/coverage`
-
 
 
 
@@ -89,6 +88,7 @@ Para tornar o comando para executar o PHPUnit relacionável, abra o arquivo comp
 
 ## Running Tests
 `composer test`
+`php artisan test`
 
 
 
@@ -122,3 +122,4 @@ Para tornar o comando para executar o PHPUnit relacionável, abra o arquivo comp
 - https://phpunit.de/
 - https://phpunit.readthedocs.io/pt_BR/latest/
 - https://www.twilio.com/blog/unit-testing-laravel-api-phpunit
+- - https://auth0.com/blog/testing-laravel-apis-with-phpunit/

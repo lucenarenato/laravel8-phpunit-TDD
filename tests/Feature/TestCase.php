@@ -11,7 +11,7 @@ use Faker\Generator;
 
 abstract class TestCase extends BaseTestCase
 {
-    use CreatesApplication, DatabaseMigrations;
+    /*use CreatesApplication, DatabaseMigrations;
     
     private Generator $faker;
     
@@ -28,7 +28,7 @@ abstract class TestCase extends BaseTestCase
         if ($key === 'faker')
             return $this->faker;
         throw new Exception('Unknown Key Requested');
-    }
+    }*/
     // public function setUp(): void
     // {
     //     parent::setUp();

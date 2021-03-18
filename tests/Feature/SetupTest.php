@@ -11,18 +11,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 
 class SetupTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
-    public function test_example()
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-    }
-
     /** @test */                                    
     public function user_can_register_account()     
     {                                               
