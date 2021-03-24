@@ -1,8 +1,8 @@
-# Laravel test - Usando PHPUnit com Laravel
+# Laravel 8 tests - Usando PHPUnit com Laravel
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-`php artisan db:seed --class=UsersSeede`
+`php artisan db:seed --class=UsersSeeder`
 
 `php artisan route:list`
 
@@ -29,9 +29,6 @@ para fazer testes funcionalidade, simulando uma pessoa navegando no seu projeto
 > no .env local é bom colocar a porta do serve. 
 `APP_URL=http://localhost:8000`
 
-php artisan config:cache
-
-php artisan make:test CustomerTest
 
 > usando anotetion = /** @test */
 
@@ -51,10 +48,11 @@ php artisan make:controller CustomerController --resource
 vendor/bin/phpunit --filter only_logged_in_users_can_see_customers_list
 
 ## unit
-
+```
 php artisan make:test UserTest --unit
-
 vendor/bin/phpunit --filter check_if_user_column_is_correct
+php artisan make:test CustomerTest
+```
 
 ## Testes de login
 
@@ -90,6 +88,15 @@ Para tornar o comando para executar o PHPUnit relacionável, abra o arquivo comp
 `composer test`
 `php artisan test`
 
+## Tests composer
+`php artisan test test_compose`
+
+## clear
+```sh
+php artisan config:cache
+
+```
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="tdd.png" width="400"></a></p>
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="ciclo.jpg" width="400"></a></p>
 
@@ -123,4 +130,6 @@ Para tornar o comando para executar o PHPUnit relacionável, abra o arquivo comp
 - https://phpunit.de/
 - https://phpunit.readthedocs.io/pt_BR/latest/
 - https://www.twilio.com/blog/unit-testing-laravel-api-phpunit
-- - https://auth0.com/blog/testing-laravel-apis-with-phpunit/
+- https://auth0.com/blog/testing-laravel-apis-with-phpunit/
+
+# Renato Lucena - 2021

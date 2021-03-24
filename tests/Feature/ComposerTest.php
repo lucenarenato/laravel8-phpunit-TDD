@@ -2,12 +2,13 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use Tests\TestPersonCase;
 
-class ComposerTest extends TestCase
+class ComposerTest extends TestPersonCase
 {
-    
     /** @test */
     public function test_composer()
     {
@@ -18,14 +19,14 @@ class ComposerTest extends TestCase
         $this->assertSame($content_hash, $lock['content-hash']);
         
         if ($lock['content-hash'] !== $content_hash) {
-            echo "Lock file out of date\n";
+            echo "Different or outdated composer\n";
             exit(1);
         }
 
-        echo "Lock file up to date\n";
-        //$response->assertStatus(200);
-
+        echo "\n Equal and updated composer\n";
+        
     }
+
     protected static function getContentHash($composerFileContents)
     {
         $content = json_decode($composerFileContents, true);
@@ -57,5 +58,4 @@ class ComposerTest extends TestCase
 
         return md5(json_encode($relevantContent));
     }
-
 }
