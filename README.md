@@ -124,6 +124,15 @@ php artisan config:cache
    npm install && npm run dev
 ```   
 
+> Please note that you should also update your call to User factory: factory('App\User')->create()->id;
+
+> Here is the relevant documentation: https://laravel.com/docs/8.x/database-testing#creating-models
+
+> However, if you prefer to use the Laravel 7.x style factories, you can use the package laravel/legacy-factories You may install it with composer:
+## Laravel 7.x style factories
+
+`composer require laravel/legacy-factories`
+
 - https://laravel.com/docs/8.x/testing
 - https://www.youtube.com/watch?v=f3tD-K796xo
 - https://www.youtube.com/watch?v=IRrxbGjKW3s

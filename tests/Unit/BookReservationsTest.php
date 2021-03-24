@@ -2,9 +2,9 @@
 
 namespace Tests\Unit;
 
-use App\Book;
-use App\Reservation;
-use App\User;
+use App\Models\Book;
+use App\Models\Reservation;
+use App\Models\User;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 

@@ -4,6 +4,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpFoundation\Request;
 
 //controller
 use App\Http\Controllers\CustomerController;
@@ -34,6 +35,9 @@ Route::post('/authors', [AuthorsController::class],'store');
 Route::post('/checkout/{book}', [CheckoutBookController::class],'store');
 Route::post('/checkin/{book}', [CheckinBookController::class], 'store');
 
+Route::post('/users', function() {
+    App\Models\User::create(request(['name', 'email', 'password']));
+});
 
 /*Auth::routes();
 

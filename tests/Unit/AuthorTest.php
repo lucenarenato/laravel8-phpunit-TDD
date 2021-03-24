@@ -2,7 +2,7 @@
 
 namespace Tests\Unit;
 
-use App\Author;
+use App\Models\Author;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 

@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\Author;
+use App\Models\Author;
 use App\Models\Book;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
