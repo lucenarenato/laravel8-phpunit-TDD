@@ -90,7 +90,8 @@ Para tornar o comando para executar o PHPUnit relacionável, abra o arquivo comp
 `composer test`
 `php artisan test`
 
-
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="tdd.png" width="400"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="ciclo.jpg" width="400"></a></p>
 
 ## Install Laravel 8
 ```sh

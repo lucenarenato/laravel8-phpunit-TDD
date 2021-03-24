@@ -2,9 +2,9 @@
 
 namespace Tests\Feature;
 
-use App\Book;
-use App\Reservation;
-use App\User;
+use App\Models\Book;
+use App\Models\Reservation;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
