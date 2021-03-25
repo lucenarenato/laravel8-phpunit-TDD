@@ -51,6 +51,7 @@ vendor/bin/phpunit --filter only_logged_in_users_can_see_customers_list
 ```
 php artisan make:test UserTest --unit
 vendor/bin/phpunit --filter check_if_user_column_is_correct
+vendor/bin/phpunit --filter upload_file_test
 php artisan make:test CustomerTest
 ```
 
